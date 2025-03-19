@@ -1,3 +1,8 @@
+import './theme/variables.css';
+import '@ionic/react/css/core.css';
+import '@ionic/react/css/normalize.css';
+import '@ionic/react/css/structure.css';
+import '@ionic/react/css/typography.css';
 import { Redirect, Route } from 'react-router-dom';
 import {
     IonApp,
@@ -11,18 +16,12 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { home } from 'ionicons/icons';
 import { Home } from './pages/Home';
-
-import '@ionic/react/css/core.css';
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
-
-import './theme/variables.css';
+import styles from './App.module.css'
 
 setupIonicReact();
 
 export const App: React.FC = () => (
-    <IonApp>
+    <IonApp className={styles.container}>
         <IonReactRouter>
             <IonTabs>
                 <IonRouterOutlet>

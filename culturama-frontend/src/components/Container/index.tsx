@@ -1,4 +1,5 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react"
+import styles from './index.module.css'
 
 type ContainerProps = {
     title?: string;
@@ -7,7 +8,7 @@ type ContainerProps = {
 
 export const Container: React.FC<ContainerProps> = ({ title, children }) => {
     return (
-        <IonPage>
+        <IonPage className={styles.container}>
             <IonHeader>
                 {title && (
                     <IonToolbar>
@@ -19,5 +20,5 @@ export const Container: React.FC<ContainerProps> = ({ title, children }) => {
                 {children}
             </IonContent>
         </IonPage>
-    )
+    );
 }
