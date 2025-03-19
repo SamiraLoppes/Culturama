@@ -18,11 +18,12 @@ import '@ionic/react/css/structure.css';
 import '@ionic/react/css/typography.css';
 
 import './theme/variables.css';
+import './App.css'
 
 setupIonicReact();
 
 export const App: React.FC = () => (
-    <IonApp>
+    <IonApp className='container'>
         <IonReactRouter>
             <IonTabs>
                 <IonRouterOutlet>
