@@ -1,59 +1,57 @@
-import "./index.css";
-import { IonIcon, IonSearchbar } from "@ionic/react";
-import { person } from "ionicons/icons";
+import styles from "./index.module.css";
+import { IonIcon } from "@ionic/react";
 import { Container } from "../../components/Container";
-import { SliderCard, SliderCardProps } from "../../components/SliderCard";
+import { SliderCardProps } from "../../components/SliderCard";
 import { Slider } from "../../components/Slider";
+import { options } from "ionicons/icons";
 
 const cards: SliderCardProps[] = [
     {
-        img:"/images/imageAquario.webp",
+        img: "/images/imageAquario.webp",
     },
     {
-        img:"/images/imageCac.jpg",
+        img: "/images/imageCac.jpg",
     },
     {
-        img:"/images/imageCachoeira2.jpg",
+        img: "/images/imageCachoeira2.jpg",
     }
 ];
 
-const cardsdescription:SliderCardProps[] = [
+const cardsdescription: SliderCardProps[] = [
     {
-        img:"/images/imageCachoeira2.jpg",
+        img: "/images/imageCachoeira2.jpg",
         description: "Cachoeira Azul",
     },
     {
-        img:"/images/imageNobres.webp",
+        img: "/images/imageNobres.webp",
         description: "Nobres",
     }
 ]
 
 export const Home: React.FC = () => {
-
-
     return (
         <Container>
-            <header className="header">
-                <div className="infos">
-                    <h2 className="title">Olá, Samira</h2>
-                    <p className="subtitle">Qual será seu destino hoje?</p>
+            <header className={styles.header}>
+                <div className={styles.profile}>
+                    <h2 className={styles.title}>Olá, Samira</h2>
+                    <p className={styles.subtitle}>Qual será seu destino hoje?</p>
                 </div>
 
                 {/* Ícone de usuário */}
-                <div className="image-container">
-                    <IonIcon aria-hidden="true" size="large" icon={person} />
-                </div>
+                <img src="https://avatars.githubusercontent.com/u/137065498?v=4" className={styles.avatar} />
             </header>
 
             {/* Campo de busca */}
-            <div>
-                <IonSearchbar placeholder="Buscar eventos..." />
-                <p className="subtitle">Se liga nessas viagens em alta:</p>
+            <div className={styles.searchBar}>
+                <input type="text" placeholder="Para onde gostaria de ir?" className={styles.inputSearch} />
+                <IonIcon aria-hidden="true" size="large" className={styles.iconFilter} icon={options} />
             </div>
 
+            <p className={styles.subtitle}>Se liga nessas viagens em alta:</p>
+
             {/* Carrossel de imagens */}
-            <Slider 
-                cards={cards} 
+            <Slider
+                cards={cards}
                 settings={{
                     dots: true,
                     infinite: true,
@@ -62,15 +60,15 @@ export const Home: React.FC = () => {
                     slidesToScroll: 1,
                     autoplay: true,
                     autoplaySpeed: 3000,
-                }} 
+                }}
             />
 
-            <div className="avaliacao">
-                <p className="subtitle">Se liga nessas viagens em alta:</p>
+            <div>
+                <p className={styles.subtitle}>Se liga nessas viagens em alta:</p>
             </div>
 
-            <Slider 
-                cards={cardsdescription}            
+            <Slider
+                cards={cardsdescription}
                 settings={{
                     dots: false,
                     infinite: false,
@@ -79,7 +77,7 @@ export const Home: React.FC = () => {
                     slidesToScroll: 1,
                     autoplay: true,
                     autoplaySpeed: 3000,
-                }} 
+                }}
             />
         </Container>
     );
