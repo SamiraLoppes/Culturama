@@ -2,27 +2,34 @@ import "./index.css";
 import { IonIcon, IonSearchbar } from "@ionic/react";
 import { person } from "ionicons/icons";
 import { Container } from "../../components/Container";
-import Slider from "react-slick"; // Importando react-slick
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { SliderCard, SliderCardProps } from "../../components/SliderCard";
+import { Slider } from "../../components/Slider";
+
+const cards: SliderCardProps[] = [
+    {
+        img:"/images/imageAquario.webp",
+    },
+    {
+        img:"/images/imageCac.jpg",
+    },
+    {
+        img:"/images/imageCachoeira2.jpg",
+    }
+];
+
+const cardsdescription:SliderCardProps[] = [
+    {
+        img:"/images/imageCachoeira2.jpg",
+        description: "Cachoeira Azul",
+    },
+    {
+        img:"/images/imageNobres.webp",
+        description: "Nobres",
+    }
+]
 
 export const Home: React.FC = () => {
-    const images = [
-        "/images/imageAquario.webp",
-        "/images/imageCac.jpg",
-        "/images/imageCachoeira2.jpg",
-    ];
 
-    // Configuração do carrossel
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    };
 
     return (
         <Container>
@@ -45,16 +52,35 @@ export const Home: React.FC = () => {
             </div>
 
             {/* Carrossel de imagens */}
-            <Slider {...settings} className="carousel">
-                {images.map((src, index) => (
-                    <div key={index} className="slide">
-                        <img src={src} alt={`Imagem ${index + 1}`} className="carousel-img" />
-                    </div>
-                ))}
-            </Slider>
+            <Slider 
+                cards={cards} 
+                settings={{
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                }} 
+            />
+
             <div className="avaliacao">
                 <p className="subtitle">Se liga nessas viagens em alta:</p>
             </div>
+
+            <Slider 
+                cards={cardsdescription}            
+                settings={{
+                    dots: false,
+                    infinite: false,
+                    speed: 500,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                }} 
+            />
         </Container>
     );
 };
