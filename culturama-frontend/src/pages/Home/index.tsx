@@ -64,7 +64,7 @@ export const Home: React.FC = () => {
             />
 
             <div>
-                <p className={styles.subtitle}>Se liga nessas viagens em alta:</p>
+                <p className={styles.subtitle}>Os pontos mais lindos de ver:</p>
             </div>
 
             <Slider

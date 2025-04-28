@@ -1,0 +1,7 @@
+ion-tab-bar.rounded-tabbar {
+    margin: 0 16px 16px 16px;
+    border-radius: 20px;
+    background: #000 !important;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
