@@ -10,11 +10,11 @@ import {
     setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { home, star, settings } from 'ionicons/icons';
+import { home, star, logIn } from 'ionicons/icons';
 import { useState } from 'react';
-
 import { Home } from './pages/Home';
-import { Favorites } from './pages/Favorites'
+import { Favorites } from './pages/Favorites';
+import { Login } from './pages/Login';
 
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
@@ -42,8 +42,8 @@ export const App: React.FC = () => {
                         <IonTabButton onClick={() => setCurrentPage('favorites')} selected={currentPage === 'favorites'} tab="favorites" href="/favorites">
                             <IonIcon aria-hidden="true" icon={star} />
                         </IonTabButton>
-                        <IonTabButton onClick={() => setCurrentPage('settings')} selected={currentPage === 'settings'} tab="settings" href="/settings">
-                         <IonIcon aria-hidden="true" icon={settings} />
+                        <IonTabButton onClick={() => setCurrentPage('login')} selected={currentPage === 'login'} tab="login" href="/login">
+                         <IonIcon aria-hidden="true" icon={logIn} />
                         </IonTabButton>
                     </IonTabBar>
                 </IonTabs>
