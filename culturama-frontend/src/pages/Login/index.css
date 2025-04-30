@@ -1,38 +1,67 @@
-.login-container {
-    background-color: black;
-    min-height: 100vh;
-    color: white;
+.login-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 150px;
-    /* espaço no topo */
-    font-family: sans-serif;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.logo-container {
+    margin-bottom: 30px;
 }
 
 .logo {
     width: 300px;
     height: auto;
-    margin-bottom: 80px;
+    object-fit: contain;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 100%;
-    padding: 1rem;
-}
-
-
-.title {
-    color: #ffffff;
-    font-size: 1.8rem;
+.greeting {
+    font-size: 65px;
     font-weight: 600;
+    margin-bottom: 8px;
 }
 
-.subtitle {
+.description {
+    font-size: 19px;
     color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 500;
+    margin-bottom: 26px;
+}
+
+.question {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.button {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button.outline {
+    border: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    color: rgb(246, 246, 246);
+}
+
+.button.filled {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
 }

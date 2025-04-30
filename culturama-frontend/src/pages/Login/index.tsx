@@ -1,46 +1,30 @@
+import { useHistory } from 'react-router-dom';
 import React from 'react';
 import './index.css';
 import { Container } from '../../components/Container';
 
 export const Login: React.FC = () => {
+    const history = useHistory();
     return (
         <Container>
-            <div className="header">
-                <div className="profile">
-                    <h2 className="title">Olá viajante</h2>
-                    <p className="subtitle">Está pronto para descobrir um novo lugar incrível?</p>
-                    <strong>Antes de começar, queremos tirar uma dúvida.</strong>
+            <div className="login-screen">
+                <div className="logo-container">
+                    <img src="/images/logo.png" alt="Logo Culturama" className="logo" />
                 </div>
-                <img src="/images/logo.png" alt="Logo Culturama" className="logo" />
+
+                <h2 className="greeting">Olá viajante</h2>
+                <p className="description">Está pronto para descobrir um novo lugar incrível?</p>
+                <strong className="question">Antes de começar, queremos tirar uma dúvida.</strong>
+
+                <div className="button-group">
+                    <button className="button outline" onClick={() => history.push('/signin')}>
+                        Já tenho uma conta
+                    </button>
+                    <button className="button filled" onClick={() => history.push('/signup')}>
+                        Sou novo(a) aqui
+                    </button>
+                </div>
             </div>
-
-            <button
-                style={{
-                    marginTop: '30px',
-                    padding: '10px 20px',
-                    borderRadius: '8px',
-                    border: '2px solid white',
-                    background: 'transparent',
-                    color: 'white',
-                    cursor: 'pointer',
-                    marginBottom: '10px',
-                }}
-            >
-                Já tenho uma conta
-            </button>
-
-            <button
-                style={{
-                    padding: '10px 20px',
-                    borderRadius: '8px',
-                    border: 'none',
-                    background: 'white',
-                    color: 'black',
-                    cursor: 'pointer',
-                }}
-            >
-                Sou novo(a) aqui
-            </button>
         </Container>
     );
 };
