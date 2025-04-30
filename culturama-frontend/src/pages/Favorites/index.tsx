@@ -1,20 +1,21 @@
-import styles from "./index.module.css";
-import { IonIcon } from "@ionic/react";
-import { Container } from "../../components/Container";
-import { SliderCardProps } from "../../components/SliderCard";
-import { Slider } from "../../components/Slider";
-import { options } from "ionicons/icons";
+import React from 'react';
+import styles from './index.module.css';
+import { IonIcon } from '@ionic/react';
+import { Container } from '../../components/Container';
+import { SliderCardProps } from '../../components/SliderCard';
+import { Slider } from '../../components/Slider';
+import { options } from 'ionicons/icons';
 
 const cardsdescription: SliderCardProps[] = [
     {
-        img: "/images/imagePantanal.jpg",
-        description: "Pantanal - Mato Grosso",
+        img: '/images/imagePantanal.jpg',
+        description: 'Pantanal - Mato Grosso',
     },
     {
-        img: "/images/imageNobres.webp",
-        description: "Nobres",
-    }
-]
+        img: '/images/imageNobres.webp',
+        description: 'Nobres',
+    },
+];
 
 export const Favorites: React.FC = () => {
     return (
@@ -47,7 +48,7 @@ export const Favorites: React.FC = () => {
                     autoplaySpeed: 3000,
                 }}
             />
-              <Slider
+            <Slider
                 cards={cardsdescription}
                 settings={{
                     dots: false,

@@ -1,32 +1,33 @@
-import styles from "./index.module.css";
-import { IonIcon } from "@ionic/react";
-import { Container } from "../../components/Container";
-import { SliderCardProps } from "../../components/SliderCard";
-import { Slider } from "../../components/Slider";
-import { options } from "ionicons/icons";
+import React from 'react';
+import styles from './index.module.css';
+import { IonIcon } from '@ionic/react';
+import { Container } from '../../components/Container';
+import { SliderCardProps } from '../../components/SliderCard';
+import { Slider } from '../../components/Slider';
+import { options } from 'ionicons/icons';
 
 const cards: SliderCardProps[] = [
     {
-        img: "/images/imageAquario.webp",
+        img: '/images/imageAquario.webp',
     },
     {
-        img: "/images/imageCac.jpg",
+        img: '/images/imageCac.jpg',
     },
     {
-        img: "/images/imageCachoeira2.jpg",
-    }
+        img: '/images/imageCachoeira2.jpg',
+    },
 ];
 
 const cardsdescription: SliderCardProps[] = [
     {
-        img: "/images/imageCachoeira2.jpg",
-        description: "Cachoeira Azul",
+        img: '/images/imageCachoeira2.jpg',
+        description: 'Cachoeira Azul',
     },
     {
-        img: "/images/imageNobres.webp",
-        description: "Nobres",
-    }
-]
+        img: '/images/imageNobres.webp',
+        description: 'Nobres',
+    },
+];
 
 export const Home: React.FC = () => {
     return (

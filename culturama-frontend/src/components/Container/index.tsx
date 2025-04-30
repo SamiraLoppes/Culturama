@@ -1,11 +1,12 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react"
+import React from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
-import styles from "./index.module.css"
+import styles from './index.module.css';
 
 type ContainerProps = {
     title?: string;
     children: React.ReactNode;
-}
+};
 
 export const Container: React.FC<ContainerProps> = ({ title, children }) => {
     return (
@@ -17,9 +18,7 @@ export const Container: React.FC<ContainerProps> = ({ title, children }) => {
                     </IonToolbar>
                 )}
             </IonHeader>
-            <IonContent fullscreen>
-                {children}
-            </IonContent>
+            <IonContent fullscreen>{children}</IonContent>
         </IonPage>
-    )
-}
+    );
+};

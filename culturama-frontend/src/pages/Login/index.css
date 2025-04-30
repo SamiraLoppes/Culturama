@@ -1,0 +1,38 @@
+.login-container {
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    /* espaço no topo */
+    font-family: sans-serif;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 80px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 1rem;
+}
+
+
+.title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 500;
+}

@@ -1,9 +1,10 @@
-import styles from "./index.module.css"
+import React from 'react';
+import styles from './index.module.css';
 
 export type SliderCardProps = {
     img: string;
     description?: string;
-}
+};
 
 export function SliderCard({ img, description }: SliderCardProps) {
     return (
@@ -15,6 +16,5 @@ export function SliderCard({ img, description }: SliderCardProps) {
                 </div>
             )}
         </div>
-
-    )
+    );
 }
