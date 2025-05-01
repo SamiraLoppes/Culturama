@@ -38,11 +38,9 @@ export const Home: React.FC = () => {
                     <p className={styles.subtitle}>Qual será seu destino hoje?</p>
                 </div>
 
-                {/* Ícone de usuário */}
                 <img src="https://avatars.githubusercontent.com/u/137065498?v=4" className={styles.avatar} />
             </header>
 
-            {/* Campo de busca */}
             <div className={styles.searchBar}>
                 <input type="text" placeholder="Para onde gostaria de ir?" className={styles.inputSearch} />
                 <IonIcon aria-hidden="true" size="large" className={styles.iconFilter} icon={options} />
@@ -50,7 +48,6 @@ export const Home: React.FC = () => {
 
             <p className={styles.subtitle}>Se liga nessas viagens em alta:</p>
 
-            {/* Carrossel de imagens */}
             <Slider
                 cards={cards}
                 settings={{

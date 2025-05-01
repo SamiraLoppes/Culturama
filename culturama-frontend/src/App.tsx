@@ -4,6 +4,7 @@ import { IonApp, IonIcon, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, set
 import { IonReactRouter } from '@ionic/react-router';
 import { Route, Redirect } from 'react-router-dom'; // ✅ Usar Redirect no lugar de Navigate
 import { home, star } from 'ionicons/icons';
+import './theme/global.css';
 
 import { Home } from './pages/Home';
 import { Favorites } from './pages/Favorites';
@@ -43,7 +44,7 @@ export const App: React.FC = () => {
                                     <Route exact path="/tabs/favorites" component={Favorites} />
                                     <Route exact path="/tabs" render={() => <Redirect to="/tabs/home" />} />
                                 </IonRouterOutlet>
-                                <IonTabBar slot="bottom">
+                                <IonTabBar slot="bottom" className="custom-tab-bar">
                                     <IonTabButton tab="home" href="/tabs/home">
                                         <IonIcon icon={home} />
                                     </IonTabButton>

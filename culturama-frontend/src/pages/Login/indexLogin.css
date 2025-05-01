@@ -3,15 +3,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 14px;
     text-align: center;
     height: 100vh;
     box-sizing: border-box;
-    background-color: black;
+    background-color: #FFFFFF;
 }
 
 .logo-container {
-    margin-bottom: 30px;
+    margin-bottom: 9px;
 }
 
 .logo {
@@ -21,15 +21,15 @@
 }
 
 .greeting {
-    font-size: 65px;
-    font-weight: 600;
-    margin-bottom: 8px;
+    font-size: 25px;
+    font-weight: 64;
+    margin-bottom: 80px;
 }
 
 .description {
-    font-size: 19px;
-    color: #ffffff;
-    margin-bottom: 26px;
+    font-size: 15px;
+    color: #0e0e0e;
+    margin-bottom: 50px;
 }
 
 .question {
@@ -47,7 +47,7 @@
 }
 
 .button {
-    padding: 12px;
+    padding: 18px;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
@@ -55,13 +55,13 @@
 }
 
 .button.outline {
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid black;
     background: transparent;
-    color: rgb(246, 246, 246);
+    color: black;
 }
 
 .button.filled {
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background: black;
+    color: #fff;
     border: none;
 }

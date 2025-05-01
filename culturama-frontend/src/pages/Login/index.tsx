@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import React from 'react';
-import './index.css';
+import './indexLogin.css';
 import { Container } from '../../components/Container';
 
 export const Login: React.FC = () => {
@@ -9,7 +9,7 @@ export const Login: React.FC = () => {
         <Container>
             <div className="login-screen">
                 <div className="logo-container">
-                    <img src="/images/logo.png" alt="Logo Culturama" className="logo" />
+                    <img src="/images/Logo.png" alt="Logo Culturama" className="logo" />
                 </div>
 
                 <h2 className="greeting">Olá viajante</h2>
