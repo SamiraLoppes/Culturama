@@ -1,33 +1,11 @@
 import React from 'react';
 import styles from './index.module.css';
+import places from '../../data/places.json';
 import { IonIcon } from '@ionic/react';
 import { Container } from '../../components/Container';
-import { SliderCardProps } from '../../components/SliderCard';
+//import { SliderCardProps } from '../../components/SliderCard';
 import { Slider } from '../../components/Slider';
 import { options } from 'ionicons/icons';
-
-const cards: SliderCardProps[] = [
-    {
-        img: '/images/imageAquario.webp',
-    },
-    {
-        img: '/images/imageCac.jpg',
-    },
-    {
-        img: '/images/imageCachoeira2.jpg',
-    },
-];
-
-const cardsdescription: SliderCardProps[] = [
-    {
-        img: '/images/imageCachoeira2.jpg',
-        description: 'Cachoeira Azul',
-    },
-    {
-        img: '/images/imageNobres.webp',
-        description: 'Nobres',
-    },
-];
 
 export const Home: React.FC = () => {
     return (
@@ -49,7 +27,7 @@ export const Home: React.FC = () => {
             <p className={styles.subtitle}>Se liga nessas viagens em alta:</p>
 
             <Slider
-                cards={cards}
+                cards={places}
                 settings={{
                     dots: true,
                     infinite: true,
@@ -66,13 +44,13 @@ export const Home: React.FC = () => {
             </div>
 
             <Slider
-                cards={cardsdescription}
+                cards={places}
                 settings={{
                     dots: false,
                     infinite: false,
                     speed: 500,
                     slidesToShow: 2,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
                     autoplay: true,
                     autoplaySpeed: 3000,
                 }}

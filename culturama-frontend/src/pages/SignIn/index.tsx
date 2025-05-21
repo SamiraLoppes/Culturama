@@ -10,12 +10,14 @@ const SignIn: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = async () => {
+    const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
         try {
             await api.post('/signin', { email, password });
             alert('Login realizado com sucesso!');
             history.push('/tabs/home');
         } catch (error) {
+            console.error(error);
             alert('Email ou senha inválidos. Tente novamente.');
         }
     };
@@ -32,26 +34,33 @@ const SignIn: React.FC = () => {
                 <h2>Acesse sua conta</h2>
                 <p className="subtitle">Estávamos com saudades :)</p>
 
-                <div className="input-group">
-                    <span className="icon">👤</span>
-                    <input type="email" placeholder="Inserir e-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </div>
+                <form onSubmit={handleLogin}>
+                    <div className="input-group">
+                        <span className="icon">👤</span>
+                        <input
+                            type="email"
+                            placeholder="Inserir e-mail"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
 
-                <div className="input-group">
-                    <span className="icon">🔒</span>
-                    <input
-                        type="password"
-                        placeholder="Inserir senha"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
+                    <div className="input-group">
+                        <span className="icon">🔒</span>
+                        <input
+                            type="password"
+                            placeholder="Inserir senha"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
 
-                <p className="link">Esqueceu a senha?</p>
+                    <p className="link">Esqueceu a senha?</p>
 
-                <button className="primary-button" onClick={handleLogin}>
-                    Entrar
-                </button>
+                    <button className="primary-button" type="submit">
+                        Entrar
+                    </button>
+                </form>
             </div>
         </Container>
     );

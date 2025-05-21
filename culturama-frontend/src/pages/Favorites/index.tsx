@@ -1,21 +1,16 @@
 import React from 'react';
 import styles from './index.module.css';
+import places from '../../data/places.json';
 import { IonIcon } from '@ionic/react';
 import { Container } from '../../components/Container';
-import { SliderCardProps } from '../../components/SliderCard';
+// import { SliderCardProps } from '../../components/SliderCard';
 import { Slider } from '../../components/Slider';
 import { options } from 'ionicons/icons';
 
-const cardsdescription: SliderCardProps[] = [
-    {
-        img: '/images/imagePantanal.jpg',
-        description: 'Pantanal - Mato Grosso',
-    },
-    {
-        img: '/images/imageNobres.webp',
-        description: 'Nobres',
-    },
-];
+// const cardsdescription: SliderCardProps[] = places.map((place) => ({
+//     img: place.images[0], // pega a primeira imagem do lugar
+//     href: `/place/${place.id}`, // cria uma rota dinâmica
+// }));
 
 export const Favorites: React.FC = () => {
     return (
@@ -35,7 +30,7 @@ export const Favorites: React.FC = () => {
             </div>
 
             <Slider
-                cards={cardsdescription}
+                cards={places}
                 settings={{
                     dots: false,
                     infinite: false,
@@ -47,7 +42,7 @@ export const Favorites: React.FC = () => {
                 }}
             />
             <Slider
-                cards={cardsdescription}
+                cards={places}
                 settings={{
                     dots: false,
                     infinite: false,

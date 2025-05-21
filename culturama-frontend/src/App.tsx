@@ -16,6 +16,7 @@ import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
 import '@ionic/react/css/structure.css';
 import '@ionic/react/css/typography.css';
+import { PlacePage } from './pages/PlacePage';
 
 setupIonicReact();
 
@@ -26,10 +27,9 @@ export const App: React.FC = () => {
                 <IonRouterOutlet>
                     {/* Rota para login */}
                     <Route exact path="/login" component={Login} />
-
-                    {/* Rotas adicionais */}
                     <Route exact path="/signin" component={SignIn} />
                     <Route exact path="/signup" component={SignUp} />
+                    <Route exact path="/place/:id" component={PlacePage} />
 
                     {/* Redireciona raiz para /login */}
                     <Route exact path="/" render={() => <Redirect to="/login" />} />

@@ -1,0 +1,46 @@
+[
+    {
+        "id": "nobres",
+        "name": "Nobres",
+        "description": "Um lindo parque natural com trilhas e cachoeiras.",
+        "address": "Nobre MT",
+        "images": [
+            "/images/imageAquario.png",
+            "/images/imageNobres.png",
+            "/images/REFUGIO AZUL.png"
+        ]
+    },
+    {
+        "id": "Pantanal",
+        "name": "Pantanal Matogrossence",
+        "images": [
+            "/images/animaisPantanal.png",
+            "/images/imagenPantanal.png",
+            "/images/Pantanal.png",
+            "/images/PANT.png"
+        ]
+    },
+    {
+        "id": "chapada",
+        "name": "Chapada dos Guimarães",
+        "images": [
+            "/images/imageCac.png",
+            "/images/imageCachoeira2.png"
+        ]
+    },
+    {
+        "id": "Cuiabá",
+        "name": "Cuiabá",
+        "description": "Um lindo parque natural com trilhas e cachoeiras.",
+        "images": [
+            "/images/igrejaCuiaba.png"
+        ]
+    },
+    {
+        "id": "Tangará",
+        "name": "Tangará",
+        "images": [
+            "/images/TANGARA.png"
+        ]
+    }
+]
